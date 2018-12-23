@@ -29,10 +29,17 @@ namespace Proyecto4_Diplomado_Web_MVC_UASD_Registro.Controllers
 
         public ActionResult CargaDatos()
         {
-            string nombre = Request.Form["nombre"].ToString();
-            string comentarios = Request.Form["comentarios"].ToString();
-            LibroVisitas libro = new LibroVisitas();
-            libro.Grabar(nombre, comentarios);
+            LibroEstudiantes libro = new LibroEstudiantes();
+            libro.Nombre = Request.Form["nombre"].ToString();
+            libro.Telefono = Request.Form["telefono"].ToString();
+            libro.Cedula = Request.Form["cedula"].ToString();
+            libro.Correo = Request.Form["correo"].ToString();
+            libro.Grabar(libro);
+
+            //string nombre = Request.Form["nombre"].ToString();
+            //string comentarios = Request.Form["comentarios"].ToString();
+            //LibroVisitas libro = new LibroVisitas();
+            //libro.Grabar(nombre, comentarios);
             return View();
         }
 
