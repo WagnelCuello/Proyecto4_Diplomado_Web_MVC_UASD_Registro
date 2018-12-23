@@ -22,6 +22,11 @@ namespace Proyecto4_Diplomado_Web_MVC_UASD_Registro.Controllers
             return View();
         }
 
+        public ActionResult FormularioEstudiantes()
+        {
+            return View();
+        }
+
         public ActionResult CargaDatos()
         {
             string nombre = Request.Form["nombre"].ToString();
@@ -37,6 +42,14 @@ namespace Proyecto4_Diplomado_Web_MVC_UASD_Registro.Controllers
             string todo = libro.Leer();
             ViewData["libro"] = todo;
             return View();
+        }
+
+        public ActionResult ListadoEstudiantes()
+        {
+            LibroEstudiantes libro = new LibroEstudiantes();
+            string todo = libro.Leer();
+            ViewData["libro"] = todo;
+            return View(libro);
         }
     }
 }

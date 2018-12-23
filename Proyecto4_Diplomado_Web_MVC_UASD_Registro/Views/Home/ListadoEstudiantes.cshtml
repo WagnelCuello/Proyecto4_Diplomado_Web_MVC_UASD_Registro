@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Proyecto4_Diplomado_Web_MVC_UASD_Registro.Models.LibroEstudiantes>
+
+<h2>Listados de Estudiantes</h2>
+<div>
+    @{
+        var grid = new WebGrid(Model, defaultSort: "Nombre");
+    }
+
+    @grid.GetHtml(columns:grid.Columns(
+        grid.Column("Nombre", header:"Nombre"),
+        grid.Column("Cedula", header:"Cedula"),
+        grid.Column("Telefonos", header:"Telefonos"),
+        grid.Column("Correo", header:"Correo")
+        ))
+</div>

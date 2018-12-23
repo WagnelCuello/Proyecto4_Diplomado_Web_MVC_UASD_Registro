@@ -97,6 +97,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\LibroEstudiantes.cs" />
     <Compile Include="Models\LibroVisitas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -107,6 +108,8 @@
     <Content Include="Views\Home\FormularioVisita.cshtml" />
     <Content Include="Views\Home\CargaDatos.cshtml" />
     <Content Include="Views\Home\ListadoVisitas.cshtml" />
+    <Content Include="Views\Home\FormularioEstudiantes.cshtml" />
+    <Content Include="Views\Home\ListadoEstudiantes.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
